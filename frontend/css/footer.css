@@ -28,6 +28,25 @@ footer {
   width: 30px;
 }
 
+.footer-icons:hover .footer-icons_img {
+  animation: 2s icons-move-up;
+}
+
+@keyframes icons-move-up {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .footer-icons_desc {
   margin-top: 5px;
   font-size: 6px;
