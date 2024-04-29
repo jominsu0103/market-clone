@@ -1,0 +1,77 @@
+<script>
+  export let location;
+
+  const moveToHome = () => {
+    window.location.hash = "/";
+  };
+
+  const moveToMyPage = () => {
+    window.location.hash = "/my";
+  };
+</script>
+
+<footer>
+  <div class="footer-block">
+    <button class="footer-icons" on:click={moveToHome}>
+      <div class="footer-icons_img">
+        {#if location === "home"}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
+            />
+            <path
+              d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
+            />
+          </svg>
+        {:else}
+          <img src="assets/home.svg" alt="" />
+        {/if}
+      </div>
+      <div class="footer-icons_desc">홈</div>
+    </button>
+    <div class="footer-icons">
+      <div class="footer-icons_img">
+        <img src="assets/doc.svg" alt="" />
+      </div>
+      <div class="footer-icons_desc">동네생활</div>
+    </div>
+    <div class="footer-icons">
+      <div class="footer-icons_img">
+        <img src="assets/location.svg" alt="" />
+      </div>
+      <div class="footer-icons_desc">내 근처</div>
+    </div>
+    <div class="footer-icons">
+      <div class="footer-icons_img">
+        <img src="assets/chat.svg" alt="" />
+      </div>
+      <div class="footer-icons_desc">채팅</div>
+    </div>
+    <button class="footer-icons" on:click={moveToMyPage}>
+      <div class="footer-icons_img">
+        {#if location === "my"}
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-6 h-6"
+        >
+            <path
+            fill-rule="evenodd"
+            d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+            clip-rule="evenodd"
+            />
+          </svg>
+        {:else}
+          <img src="assets/user.svg" alt="" />
+        {/if}
+      </div>
+      <div class="footer-icons_desc">나의 당근</div>
+    </button>
+  </div>
+</footer>
