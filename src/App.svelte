@@ -13,7 +13,6 @@
     signInWithCredential,
   } from "firebase/auth";
   import { onMount } from "svelte";
-  import Loding from "./pages/Loading.svelte";
   import Loading from "./pages/Loading.svelte";
   import Mypage from "./pages/Mypage.svelte";
 
